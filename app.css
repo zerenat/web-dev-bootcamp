@@ -1,0 +1,35 @@
+img {
+    max-width: 50ex;
+    max-height: 50ex;
+}
+
+body {
+    text-align: center;
+}
+
+button {
+    width: 25ex;
+}
+
+#controls {
+    display: inline-block;
+}
+
+#score {
+    display: inline-block;
+}
+
+#button_player_one_up {
+    background-color: crimson;
+    margin: 0.5px;
+}
+
+#button_player_two_up {
+    background-color: cornflowerblue;
+    margin: 0.5px;
+}
+
+#button_reset {
+    background-color: chartreuse;
+    margin: 0.5px;
+}

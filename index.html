@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="image_section">
+            <img src="https://www.advancedsciencenews.com/wp-content/uploads/2021/08/lisa-keffer-i0kB5B9J8Ds-unsplash.jpg">
+        </div>
+        <div id="information_section">
+            <h3 id="app_name">Ping Pong Score Keeper</h3>
+        </div>
+        <div id="score_section">
+            <div id="score">
+                <span id="score_player_one">0</span>
+                <span><label> - </label></span>
+                <span id="score_player_two">0</span>
+            </div>
+            <div>
+                <h4 id="instructions">Use the buttons below to keep track of score.</h4>
+            </div>
+            <div>
+                <label for="score_settings">Playing to:</label>
+                <select id="score_settings">
+                    <option value="1">1</li>
+                    <option value="2">2</li>
+                    <option value="3">3</li>
+                    <option value="4">4</li>
+                    <option value="5">5</li>
+                    <option value="6">6</li>
+                </select>
+            </div>
+        </div>
+        <div id="controls">
+            <button id="button_player_one_up">Player One +1</button>
+            <button id="button_player_two_up">Player Two +1</button>
+            <button id="button_reset">Reset</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
