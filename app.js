@@ -23,6 +23,7 @@ const playerOne = {
     resetScore () {
         this.setScoreLabel = 0;
         this.setScore = 0;
+        this.getScoreLabel.color = "black";
     }
 }
 
@@ -51,6 +52,7 @@ const playerTwo = {
     resetScore () {
         this.setScoreLabel = 0;
         this.setScore = 0;
+        this.getScoreLabel.color = "black";
     }
 }
 
@@ -72,6 +74,7 @@ document.getElementById("button_player_two_up").addEventListener("click", functi
         alert("player two wins!")
         reset();
     }
+    playerTwo.getScoreLabel.style.color = calculateScoreColor(playerTwo.getScore, maxPoints.getPoints)
 });
 
 document.getElementById("button_player_one_up").addEventListener("click", function () {
@@ -81,6 +84,7 @@ document.getElementById("button_player_one_up").addEventListener("click", functi
         alert("player one wins!")
         reset();
     }
+    playerOne.getScoreLabel.style.color = calculateScoreColor(playerOne.getScore, maxPoints.getPoints)
 });
 
 document.getElementById("score_settings").addEventListener("change", function (event) {
@@ -92,8 +96,14 @@ const reset = function () {
     playerTwo.resetScore();
 }
 
-const calculateScoreColor = function () {
-    
+const calculateScoreColor = function (playerScore, maxScore) {
+    if (playerScore / maxScore * 100 > 75) {
+        return "green";
+    } else if (playerScore / maxScore * 100 > 50) {
+        return "orange";
+    } else {
+        return "red";
+    }
 }
 
 document.getElementById("button_reset").addEventListener("click", function () {
