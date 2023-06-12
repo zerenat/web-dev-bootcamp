@@ -5,6 +5,8 @@ img {
 
 body {
     text-align: center;
+    width: fit-content;
+    border: 2px solid;
 }
 
 button {
@@ -32,4 +34,8 @@ button {
 #button_reset {
     background-color: chartreuse;
     margin: 0.5px;
+}
+
+#score_section {
+    border: 2px solid;
 }
