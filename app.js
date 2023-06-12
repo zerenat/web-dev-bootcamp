@@ -67,6 +67,11 @@ const maxPoints = {
     }
 }
 
+const reset = function () {
+    playerOne.resetScore();
+    playerTwo.resetScore();
+}
+
 document.getElementById("button_player_two_up").addEventListener("click", function () {
     playerTwo.setScore = playerTwo.getScore += 1;
     playerTwo.updateScoreLabel();
@@ -91,12 +96,14 @@ document.getElementById("score_settings").addEventListener("change", function (e
     maxPoints.setPoints = event.target.value;
 });
 
-const reset = function () {
+document.getElementById("button_reset").addEventListener("click", function () {
+    console.log("resetting!")
     playerOne.resetScore();
     playerTwo.resetScore();
-}
+});
 
-const calculateScoreColor = function (playerScore, maxScore) {
+
+function calculateScoreColor (playerScore, maxScore) {
     if (playerScore / maxScore * 100 > 75) {
         return "green";
     } else if (playerScore / maxScore * 100 > 50) {
@@ -106,8 +113,4 @@ const calculateScoreColor = function (playerScore, maxScore) {
     }
 }
 
-document.getElementById("button_reset").addEventListener("click", function () {
-    console.log("resetting!")
-    playerOne.resetScore();
-    playerTwo.resetScore();
-});
+
