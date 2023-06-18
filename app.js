@@ -102,7 +102,6 @@ document.getElementById("button_reset").addEventListener("click", function () {
     playerTwo.resetScore();
 });
 
-
 function calculateScoreColor (playerScore, maxScore) {
     if (playerScore / maxScore * 100 > 75) {
         return "green";
